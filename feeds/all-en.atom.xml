@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>A Pelican Blog</title><link href="/" rel="alternate"></link><link href="/feeds/all-en.atom.xml" rel="self"></link><id>/</id><updated>2017-05-15T00:00:00+00:00</updated><entry><title>Machine Learning for Frauster Detection</title><link href="/machine-learning-for-frauster-detection.html" rel="alternate"></link><published>2017-05-15T00:00:00+00:00</published><updated>2017-05-15T00:00:00+00:00</updated><author><name>Duy Ha Ly</name></author><id>tag:None,2017-05-15:/machine-learning-for-frauster-detection.html</id><summary type="html">&lt;h1&gt;Enron Fraud Indentification&lt;/h1&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>A Pelican Blog</title><link href="/" rel="alternate"></link><link href="/feeds/all-en.atom.xml" rel="self"></link><id>/</id><updated>2017-05-15T10:20:00+00:00</updated><entry><title>Machine Learning in Fraud Analysis</title><link href="/machine-learning-in-fraud-analysis.html" rel="alternate"></link><published>2017-05-15T10:20:00+00:00</published><updated>2017-05-15T10:20:00+00:00</updated><author><name></name></author><id>tag:None,2017-05-15:/machine-learning-in-fraud-analysis.html</id><summary type="html">&lt;h1&gt;Enron Fraud Indentification&lt;/h1&gt;
 &lt;p&gt;The main purpose of this project is using machine learning algorithm to detect fraudsters. Those persons are main criminals in Enron scandal. We would like to make a learning model to predict those people by using multiple variables which are reported in financial sheets and emailling list …&lt;/p&gt;</summary><content type="html">&lt;h1&gt;Enron Fraud Indentification&lt;/h1&gt;
 &lt;p&gt;The main purpose of this project is using machine learning algorithm to detect fraudsters. Those persons are main criminals in Enron scandal. We would like to make a learning model to predict those people by using multiple variables which are reported in financial sheets and emailling list. Because we have already know person of interests (POI), we could use supervised machine learning to do this task. &lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="ch"&gt;#!/usr/bin/python&lt;/span&gt;
@@ -277,7 +277,7 @@ C:\Anaconda2\lib\site-packages\ipykernel\__main__.py:10: FutureWarning: sort(col
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;&lt;img alt="png" src="Enron%20fraud%20-%20AI%20project_files/Enron%20fraud%20-%20AI%20project_24_0.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="png" src="images/Enron_ML_24_0.png"&gt;&lt;/p&gt;
 &lt;p&gt;According to the result of SelectKBest, I selected 6 features of interest since they have highest impact for the model fitting (score &amp;gt; 10). Clearly, we see that our new feature "fraction_to_poi" has high impact on the data model when it is at top 5th. Would this enginereed variable affect the validation of POIs in classifer ? To answer this question, I made an classifer testing with two feature lists: original list (without 'fraction_to_poi') and engineered list (with 'fraction_to_poi').&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;### Validate the original feature list in Naive Bayes classifier&lt;/span&gt;
 &lt;span class="n"&gt;old_features_list&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;target_list&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="nb"&gt;list&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;KBest_table&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Feature&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;iloc&lt;/span&gt;&lt;span class="p"&gt;[:&lt;/span&gt;&lt;span class="mi"&gt;6&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
@@ -552,7 +552,7 @@ done in 118.370s
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;&lt;img alt="png" src="Enron%20fraud%20-%20AI%20project_files/Enron%20fraud%20-%20AI%20project_36_0.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="png" src="images/Enron_ML_36_0.png"&gt;&lt;/p&gt;
 &lt;p&gt;I found that Naive Bayes model had the highest F1-score. I decided to select Naive Bayes and Decision Tree for my model optimization. The final model is the one which highest F1 after parameter tuning.&lt;/p&gt;
 &lt;h2&gt;4. Model optimization&lt;/h2&gt;
 &lt;p&gt;The objective of this task is trying to optimize model fitting in order to obtain at least 0.3 in both precision and recall using testing script. &lt;/p&gt;

@@ -21,15 +21,12 @@
 
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="/machine-learning-for-frauster-detection.html">Machine Learning for Frauster Detection</a></h1>
+                    <h1 class="entry-title"><a href="/machine-learning-in-fraud-analysis.html">Machine Learning in Fraud Analysis</a></h1>
 <footer class="post-info">
-        <abbr class="published" title="2017-05-15T00:00:00+00:00">
+        <abbr class="published" title="2017-05-15T10:20:00+00:00">
                 Published: Mon 15 May 2017
         </abbr>
 
-        <address class="vcard author">
-                By                         <a class="url fn" href="/author/duy-ha-ly.html">Duy Ha Ly</a>
-        </address>
 <p>In <a href="/category/python-machine-learning.html">Python, Machine Learning</a>.</p>
 
 </footer><!-- /.post-info --><h1>Enron Fraud Indentification</h1>
@@ -309,7 +306,7 @@ C:\Anaconda2\lib\site-packages\ipykernel\__main__.py:10: FutureWarning: sort(col
 </pre></div>
 
 
-<p><img alt="png" src="Enron%20fraud%20-%20AI%20project_files/Enron%20fraud%20-%20AI%20project_24_0.png"></p>
+<p><img alt="png" src="images/Enron_ML_24_0.png"></p>
 <p>According to the result of SelectKBest, I selected 6 features of interest since they have highest impact for the model fitting (score &gt; 10). Clearly, we see that our new feature "fraction_to_poi" has high impact on the data model when it is at top 5th. Would this enginereed variable affect the validation of POIs in classifer ? To answer this question, I made an classifer testing with two feature lists: original list (without 'fraction_to_poi') and engineered list (with 'fraction_to_poi').</p>
 <div class="highlight"><pre><span></span><span class="c1">### Validate the original feature list in Naive Bayes classifier</span>
 <span class="n">old_features_list</span> <span class="o">=</span> <span class="n">target_list</span> <span class="o">+</span> <span class="nb">list</span><span class="p">(</span><span class="n">KBest_table</span><span class="p">[</span><span class="s1">&#39;Feature&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:</span><span class="mi">6</span><span class="p">])</span>
@@ -584,7 +581,7 @@ done in 118.370s
 </pre></div>
 
 
-<p><img alt="png" src="Enron%20fraud%20-%20AI%20project_files/Enron%20fraud%20-%20AI%20project_36_0.png"></p>
+<p><img alt="png" src="images/Enron_ML_36_0.png"></p>
 <p>I found that Naive Bayes model had the highest F1-score. I decided to select Naive Bayes and Decision Tree for my model optimization. The final model is the one which highest F1 after parameter tuning.</p>
 <h2>4. Model optimization</h2>
 <p>The objective of this task is trying to optimize model fitting in order to obtain at least 0.3 in both precision and recall using testing script. </p>

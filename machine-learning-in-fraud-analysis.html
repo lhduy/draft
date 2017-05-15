@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
         <meta charset="utf-8" />
-        <title>A Pelican Blog - Python, Machine Learning</title>
+        <title>Machine Learning in Fraud Analysis</title>
         <link rel="stylesheet" href="/theme/css/main.css" />
         <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="A Pelican Blog Atom Feed" />
 
@@ -18,10 +18,15 @@
                     <li class="active"><a href="/category/python-machine-learning.html">Python, Machine Learning</a></li>
                 </ul></nav>
         </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/machine-learning-in-fraud-analysis.html" rel="bookmark"
+           title="Permalink to Machine Learning in Fraud Analysis">Machine Learning in Fraud Analysis</a></h1>
+    </header>
 
-            <aside id="featured" class="body">
-                <article>
-                    <h1 class="entry-title"><a href="/machine-learning-in-fraud-analysis.html">Machine Learning in Fraud Analysis</a></h1>
+    <div class="entry-content">
 <footer class="post-info">
         <abbr class="published" title="2017-05-15T10:20:00+00:00">
                 Published: Mon 15 May 2017
@@ -29,7 +34,7 @@
 
 <p>In <a href="/category/python-machine-learning.html">Python, Machine Learning</a>.</p>
 
-</footer><!-- /.post-info --><h1>Enron Fraud Indentification</h1>
+</footer><!-- /.post-info -->      <h1>Enron Fraud Indentification</h1>
 <p>The main purpose of this project is using machine learning algorithm to detect fraudsters. Those persons are main criminals in Enron scandal. We would like to make a learning model to predict those people by using multiple variables which are reported in financial sheets and emailling list. Because we have already know person of interests (POI), we could use supervised machine learning to do this task. </p>
 <div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/python</span>
 
@@ -678,8 +683,11 @@ done in 669.987s
 <h2>6. Conclusion</h2>
 <p>This Enron dataset is an unbalaned data where POIs is greatly samller than non-POIs. There are 3 outliers and many of missing values in each features of data point. I have removed all of outliers and replaced missing values by '0' during data auditing.</p>
 <p>On the other hands, I optimized Feature Selection by creating two new features: "fraction_to_poi" and "fraction_from_poi". According to the impact scores, I have selected 6 features to build my learning model. One of them was my new engineered feature. Without it, I have lower score in term of precision and recall. </p>
-<p>For learning model, I validated a series of common classifers. Based on my F1-score, I picked two classifiers: Naive Bayes and Decisition Tree. My final model is Naive Bayes model in which I receive the better score of precision (0.49) and recall (0.34) after parameter tuning.</p>                </article>
-            </aside><!-- /#featured -->
+<p>For learning model, I validated a series of common classifers. Based on my F1-score, I picked two classifiers: Naive Bayes and Decisition Tree. My final model is Naive Bayes model in which I receive the better score of precision (0.49) and recall (0.34) after parameter tuning.</p>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
         <section id="extras" class="body">
                 <div class="social">
                         <h2>social</h2>
