@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
         <meta charset="utf-8" />
-        <title>Machine Learning for Frauster Detection</title>
+        <title>A Pelican Blog - machine learning, python</title>
         <link rel="stylesheet" href="/theme/css/main.css" />
         <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="A Pelican Blog Atom Feed" />
 
@@ -15,29 +15,21 @@
         <header id="banner" class="body">
                 <h1><a href="/">A Pelican Blog </a></h1>
                 <nav><ul>
-                    <li class="active"><a href="/category/python-machine-learning.html">Python, Machine Learning</a></li>
+                    <li class="active"><a href="/category/machine-learning-python.html">machine learning, python</a></li>
                 </ul></nav>
         </header><!-- /#banner -->
-<section id="content" class="body">
-  <article>
-    <header>
-      <h1 class="entry-title">
-        <a href="/machine-learning-for-frauster-detection.html" rel="bookmark"
-           title="Permalink to Machine Learning for Frauster Detection">Machine Learning for Frauster Detection</a></h1>
-    </header>
 
-    <div class="entry-content">
+            <aside id="featured" class="body">
+                <article>
+                    <h1 class="entry-title"><a href="/machine-learning-in-fraud-analysis.html">Machine Learning in Fraud Analysis</a></h1>
 <footer class="post-info">
         <abbr class="published" title="2017-05-15T00:00:00+00:00">
                 Published: Mon 15 May 2017
         </abbr>
 
-        <address class="vcard author">
-                By                         <a class="url fn" href="/author/duy-ha-ly.html">Duy Ha Ly</a>
-        </address>
-<p>In <a href="/category/python-machine-learning.html">Python, Machine Learning</a>.</p>
+<p>In <a href="/category/machine-learning-python.html">machine learning, python</a>.</p>
 
-</footer><!-- /.post-info -->      <h1>Enron Fraud Indentification</h1>
+</footer><!-- /.post-info --><h1>Enron Fraud Indentification</h1>
 <p>The main purpose of this project is using machine learning algorithm to detect fraudsters. Those persons are main criminals in Enron scandal. We would like to make a learning model to predict those people by using multiple variables which are reported in financial sheets and emailling list. Because we have already know person of interests (POI), we could use supervised machine learning to do this task. </p>
 <div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/python</span>
 
@@ -314,7 +306,7 @@ C:\Anaconda2\lib\site-packages\ipykernel\__main__.py:10: FutureWarning: sort(col
 </pre></div>
 
 
-<p><img alt="png" src="Enron%20fraud%20-%20AI%20project_files/Enron%20fraud%20-%20AI%20project_24_0.png"></p>
+<p><img alt="png" src="images/Enron_ML_24_0.png"></p>
 <p>According to the result of SelectKBest, I selected 6 features of interest since they have highest impact for the model fitting (score &gt; 10). Clearly, we see that our new feature "fraction_to_poi" has high impact on the data model when it is at top 5th. Would this enginereed variable affect the validation of POIs in classifer ? To answer this question, I made an classifer testing with two feature lists: original list (without 'fraction_to_poi') and engineered list (with 'fraction_to_poi').</p>
 <div class="highlight"><pre><span></span><span class="c1">### Validate the original feature list in Naive Bayes classifier</span>
 <span class="n">old_features_list</span> <span class="o">=</span> <span class="n">target_list</span> <span class="o">+</span> <span class="nb">list</span><span class="p">(</span><span class="n">KBest_table</span><span class="p">[</span><span class="s1">&#39;Feature&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:</span><span class="mi">6</span><span class="p">])</span>
@@ -589,7 +581,7 @@ done in 118.370s
 </pre></div>
 
 
-<p><img alt="png" src="Enron%20fraud%20-%20AI%20project_files/Enron%20fraud%20-%20AI%20project_36_0.png"></p>
+<p><img alt="png" src="images/Enron_ML_36_0.png"></p>
 <p>I found that Naive Bayes model had the highest F1-score. I decided to select Naive Bayes and Decision Tree for my model optimization. The final model is the one which highest F1 after parameter tuning.</p>
 <h2>4. Model optimization</h2>
 <p>The objective of this task is trying to optimize model fitting in order to obtain at least 0.3 in both precision and recall using testing script. </p>
@@ -686,11 +678,8 @@ done in 669.987s
 <h2>6. Conclusion</h2>
 <p>This Enron dataset is an unbalaned data where POIs is greatly samller than non-POIs. There are 3 outliers and many of missing values in each features of data point. I have removed all of outliers and replaced missing values by '0' during data auditing.</p>
 <p>On the other hands, I optimized Feature Selection by creating two new features: "fraction_to_poi" and "fraction_from_poi". According to the impact scores, I have selected 6 features to build my learning model. One of them was my new engineered feature. Without it, I have lower score in term of precision and recall. </p>
-<p>For learning model, I validated a series of common classifers. Based on my F1-score, I picked two classifiers: Naive Bayes and Decisition Tree. My final model is Naive Bayes model in which I receive the better score of precision (0.49) and recall (0.34) after parameter tuning.</p>
-    </div><!-- /.entry-content -->
-
-  </article>
-</section>
+<p>For learning model, I validated a series of common classifers. Based on my F1-score, I picked two classifiers: Naive Bayes and Decisition Tree. My final model is Naive Bayes model in which I receive the better score of precision (0.49) and recall (0.34) after parameter tuning.</p>                </article>
+            </aside><!-- /#featured -->
         <section id="extras" class="body">
                 <div class="social">
                         <h2>social</h2>
